@@ -9,8 +9,8 @@ const experince = [
   },
   {
     title: "Front-End Developer",
-    Perusahaan: "Amartha Microfinance",
-    desc: "Twiscode specializes in developing high-performing mobile and web applications.",
+    Perusahaan: "TwisCode",
+    desc: "TwisCode specializes in developing high-performing mobile and web applications.",
     time: "May 2020 – Agust 2021",
   },
 ];

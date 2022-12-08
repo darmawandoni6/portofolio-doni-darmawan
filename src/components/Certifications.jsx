@@ -5,13 +5,13 @@ const certifications = [
     name: "CERTIFICATE GRADUATION",
     desc: "For successfully completing Golang course",
     penerbit: "Alterra Academy",
-    link: "#",
+    link: "https://drive.google.com/file/d/1rcgLEJqXrUm6qZmkK0t5M48lhL_pb_os/view?usp=share_link",
   },
   {
     name: "CERTIFICATE GRADUATION",
     desc: "who has succeeded and passed the Bootcamp Batch #14",
     penerbit: "DumbWays.id",
-    link: "#",
+    link: "https://drive.google.com/file/d/1ecbaxKpbvq1xy_FOfehNBmMpZjURYVhO/view?usp=share_link",
   },
 ];
 const Certifications = () => {
