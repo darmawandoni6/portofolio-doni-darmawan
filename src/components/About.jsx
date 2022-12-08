@@ -20,7 +20,11 @@ const About = () => {
         </div>
         <div className="subheading mb-5">
           Gg Surya, Sitirejo III, Medan Amplas, Medan City, North Sumatra 20226
-          · 085761298781 ·&nbsp;
+          ·
+          <a href="https://wa.me/6285761298781" target="_blank">
+            &nbsp;085761298781&nbsp;
+          </a>
+          ·&nbsp;
           <a href="mailto:darmawandoni6@gmail.com">darmawandoni6@gmail.com</a>
         </div>
         <p className="lead mb-5">
