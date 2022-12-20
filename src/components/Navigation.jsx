@@ -1,5 +1,35 @@
 import React from "react";
 
+const menu = [
+  {
+    label: "About",
+    href: "#about",
+  },
+  {
+    label: "Experience",
+    href: "#experience",
+  },
+  {
+    label: "Education",
+    href: "#education",
+  },
+  {
+    label: "Skills",
+    href: "#skills",
+  },
+  {
+    label: "Interests",
+    href: "#interests",
+  },
+  {
+    label: "Certifications",
+    href: "#certifications",
+  },
+  {
+    label: "Portofolio",
+    href: "#portofolio",
+  },
+];
 const Navigation = () => {
   return (
     <nav
@@ -30,36 +60,13 @@ const Navigation = () => {
       </button>
       <div className="collapse navbar-collapse" id="navbarResponsive">
         <ul className="navbar-nav">
-          <li className="nav-item">
-            <a className="nav-link js-scroll-trigger" href="#about">
-              About
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link js-scroll-trigger" href="#experience">
-              Experience
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link js-scroll-trigger" href="#education">
-              Education
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link js-scroll-trigger" href="#skills">
-              Skills
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link js-scroll-trigger" href="#interests">
-              Interests
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link js-scroll-trigger" href="#certifications">
-              Certifications
-            </a>
-          </li>
+          {menu.map((item) => (
+            <li className="nav-item" key={item.href}>
+              <a className="nav-link js-scroll-trigger" href={item.href}>
+                {item.label}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>
