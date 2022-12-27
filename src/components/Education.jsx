@@ -48,7 +48,7 @@ const education = [
         </ul>
       </>
     ),
-    time: "July 2021 - August 2021",
+    time: "August 2016 - December 2019",
     gpa: 3.78,
   },
 ];

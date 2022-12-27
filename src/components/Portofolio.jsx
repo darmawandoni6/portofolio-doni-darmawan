@@ -6,7 +6,7 @@ const listPorto = [
     desc: "Free React Js boilerplate ready to use",
     img: "/assets/img/Npm-logo.svg",
     git: "https://github.com/darmawandoni6/template-ui-react",
-    link: "https://github.com/darmawandoni6/template-ui-react",
+    link: "https://www.npmjs.com/package/template-ui-react",
   },
   {
     title: "Amartha P2P",
