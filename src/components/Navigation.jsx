@@ -4,33 +4,46 @@ const menu = [
   {
     label: "About",
     href: "#about",
+    id: "tag-about",
   },
   {
     label: "Experience",
     href: "#experience",
+    id: "tag-experience",
   },
   {
     label: "Education",
     href: "#education",
+    id: "tag-education",
   },
   {
     label: "Skills",
     href: "#skills",
+    id: "tag-skills",
   },
   {
     label: "Interests",
     href: "#interests",
+    id: "tag-interests",
   },
   {
     label: "Certifications",
     href: "#certifications",
+    id: "tag-certifications",
   },
   {
     label: "Portofolio",
     href: "#portofolio",
+    id: "tag-portofolio",
   },
 ];
 const Navigation = () => {
+  const [active, setActive] = React.useState(menu[0].href);
+
+  const handleRef = (href) => {
+    setActive(href);
+  };
+
   return (
     <nav
       className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
@@ -61,8 +74,17 @@ const Navigation = () => {
       <div className="collapse navbar-collapse" id="navbarResponsive">
         <ul className="navbar-nav">
           {menu.map((item) => (
-            <li className="nav-item" key={item.href}>
-              <a className="nav-link js-scroll-trigger" href={item.href}>
+            <li
+              className="nav-item"
+              key={item.href}
+              onClick={() => handleRef(item.href)}
+            >
+              <a
+                className={`nav-link js-scroll-trigger ${
+                  active === item.href ? "active" : ""
+                }`}
+                href={item.href}
+              >
                 {item.label}
               </a>
             </li>

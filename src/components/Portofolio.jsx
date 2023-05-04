@@ -10,15 +10,22 @@ const listPorto = [
   },
   {
     title: "Amartha P2P",
-    desc: "Aplikasi Pendanaan P2P landing",
+    desc: "P2P lending application",
     img: "/assets/img/amartha-logo.png",
     link: "https://dashboard.amartha.com/v4",
   },
   {
     title: "INA Product",
-    desc: "Aplikasi marketplace Produk indonesia",
+    desc: "Indonesian product marketplace application",
     img: "/assets/img/ina-product.svg",
     link: "https://inaproduct.com/",
+  },
+  {
+    title: "Catat Uangku",
+    desc: "Application to record accounts payable and transactions",
+    img: "https://raw.githubusercontent.com/darmawandoni6/catat-uang/master/public/icon-512x512.png",
+    link: "https://catat-uangku.vercel.app/",
+    git: "https://github.com/darmawandoni6/catat-uang",
   },
 ];
 const Portofolio = () => {
@@ -29,35 +36,45 @@ const Portofolio = () => {
         <div className="row w-100">
           {listPorto.map((item, i) => (
             <div className="col-lg-4 col-md-6" key={i}>
-              <div className="border rounded" style={{ padding: "1rem" }}>
+              <div className="card m-2" style={{ height: "95%" }}>
                 <div
-                  style={{ height: 120 }}
-                  className="mb-4 d-flex align-items-center"
+                  style={{
+                    height: 155,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
                 >
                   <img
+                    className="p-3"
                     src={item.img}
-                    style={{ width: "100%", maxHeight: "100%" }}
+                    style={{
+                      maxWidth: "100%",
+                      maxHeight: 155,
+                    }}
                     alt=""
                   />
                 </div>
-                <h1 style={{ fontSize: 22 }}>{item.title}</h1>
-                <p>{item.desc}</p>
-                {item.git && (
-                  <button
-                    className="btn btn-outline-primary me-2 mb-2"
-                    onClick={() => window.open(item.git)}
-                  >
-                    <i className="fab fa-github me-2"></i>Github
-                  </button>
-                )}
-                {item.link && (
-                  <button
-                    className="btn btn-outline-primary mb-2"
-                    onClick={() => window.open(item.link)}
-                  >
-                    <i class="fa-solid fa-link me-2"></i>Visit
-                  </button>
-                )}
+                <div className="card-body">
+                  <h5 className="card-title">{item.title}</h5>
+                  <p className="card-text">{item.desc}</p>
+                  {item.git && (
+                    <button
+                      className="btn btn-outline-primary me-2 mb-2"
+                      onClick={() => window.open(item.git)}
+                    >
+                      <i className="fab fa-github me-2"></i>Github
+                    </button>
+                  )}
+                  {item.link && (
+                    <button
+                      className="btn btn-outline-primary mb-2"
+                      onClick={() => window.open(item.link)}
+                    >
+                      <i className="fa-solid fa-link me-2"></i>Visit
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
           ))}
