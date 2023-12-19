@@ -13,6 +13,12 @@ const experince = [
     desc: "TwisCode specializes in developing high-performing mobile and web applications.",
     time: "May 2020 – Agust 2021",
   },
+  {
+    title: "Talent",
+    Perusahaan: "PT. DumbWays Indonesia Teknologi",
+    desc: "In here i am learned to Full Stack JavaScript specialization MERN, for FE used stack React Js and BE used stack Express JS, for database use to Mongo and mysql",
+    time: "February 2020 – May 2020",
+  },
 ];
 const Experience = () => {
   return (

@@ -14,18 +14,25 @@ const listPorto = [
     img: "/assets/img/amartha-logo.png",
     link: "https://dashboard.amartha.com/v4",
   },
-  {
-    title: "INA Product",
-    desc: "Indonesian product marketplace application",
-    img: "/assets/img/ina-product.svg",
-    link: "https://inaproduct.com/",
-  },
+  // {
+  //   title: "INA Product",
+  //   desc: "Indonesian product marketplace application",
+  //   img: "/assets/img/ina-product.svg",
+  //   link: "https://inaproduct.com/",
+  // },
   {
     title: "Catat Uangku",
     desc: "Application to record accounts payable and transactions",
     img: "https://raw.githubusercontent.com/darmawandoni6/catat-uang/master/public/icon-512x512.png",
     link: "https://catat-uangku.vercel.app/",
     git: "https://github.com/darmawandoni6/catat-uang",
+  },
+  {
+    title: "TEMPLATE ADMIN",
+    desc: "This application created with core-ui, NextJs and typeScript",
+    img: "https://raw.githubusercontent.com/darmawandoni6/core-ui-next/main/public/preview.png",
+    link: "https://core-ui-next.vercel.app/",
+    git: "https://github.com/darmawandoni6/core-ui-next",
   },
 ];
 const Portofolio = () => {

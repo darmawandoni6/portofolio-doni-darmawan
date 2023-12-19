@@ -19,8 +19,7 @@ const About = () => {
           </button>
         </div>
         <div className="subheading mb-5">
-          Gg Surya, Sitirejo III, Medan Amplas, Medan City, North Sumatra 20226
-          ·
+          Medan, North Sumatra 20226 ·
           <a href="https://wa.me/6285761298781" target="_blank">
             &nbsp;085761298781&nbsp;
           </a>
@@ -28,12 +27,12 @@ const About = () => {
           <a href="mailto:darmawandoni6@gmail.com">darmawandoni6@gmail.com</a>
         </div>
         <p className="lead mb-5">
-          Hi, My name is Doni darmawan, I'm a Full Stack Developer that
-          specialized in the Node JS Environtment, especially MERN Stack, I
-          really like learn new things and really love to code :) I'm currently
-          focus on developing Front end using React JS. Have experience from
-          intensive 8 weeks Dumbways.id Bootcamp Fell free to ask and contact
-          me. Best Regards.
+          Hi, I'm a Full Stack Developer that specialized in the Node JS
+          Environtment, especially MERN Stack, I really like learn new things
+          and really love to code :) I'm currently focus on developing Front end
+          using React JS. Have experience 3+ years Front End web developer and
+          intensive bootcamp for 8 weeks in Dumbways.id. Fell free to ask and
+          contact me. Best Regards.
         </p>
         <div className="social-icons">
           <a
