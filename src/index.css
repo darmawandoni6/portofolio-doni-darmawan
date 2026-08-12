@@ -1,15 +1,29 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    background-color: #f8fafc;
+    color: #0f172a;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  html.dark {
+    background-color: #020617;
+    color: #f8fafc;
   }
 
   body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     overflow-x: hidden;
     width: 100%;
+    background-color: inherit;
+    color: inherit;
   }
 
   code,
@@ -54,28 +68,57 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+.dark ::-webkit-scrollbar-track,
+html.dark ::-webkit-scrollbar-track {
   background: #020617;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #cbd5e1;
   border-radius: 4px;
 }
+.dark ::-webkit-scrollbar-thumb,
+html.dark ::-webkit-scrollbar-thumb {
+  background: #1e293b;
+}
 ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+.dark ::-webkit-scrollbar-thumb:hover,
+html.dark ::-webkit-scrollbar-thumb:hover {
   background: #334155;
 }
 
 /* Glassmorphism Cards */
 .glass-card {
-  background: rgba(15, 23, 42, 0.75);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+}
+
+.dark .glass-card,
+html.dark .glass-card {
+  background: rgba(15, 23, 42, 0.75);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: none;
 }
 
 .glass-card-hover {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .glass-card-hover:hover {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(2, 132, 199, 0.4);
+  box-shadow: 0 12px 32px -8px rgba(2, 132, 199, 0.15);
+  transform: translateY(-3px);
+}
+
+.dark .glass-card-hover:hover,
+html.dark .glass-card-hover:hover {
   background: rgba(30, 41, 59, 0.85);
   border-color: rgba(56, 189, 248, 0.35);
   box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.15);
@@ -89,6 +132,13 @@
 }
 
 .text-gradient {
+  background: linear-gradient(135deg, #0284c7 0%, #4f46e5 50%, #9333ea 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark .text-gradient,
+html.dark .text-gradient {
   background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

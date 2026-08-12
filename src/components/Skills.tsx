@@ -6,11 +6,11 @@ export const Skills: React.FC = () => {
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Frontend Stack':
-        return <Layout className="w-5 h-5 text-cyan-400" />;
+        return <Layout className="w-5 h-5 text-cyan-600 dark:text-cyan-400" />;
       case 'Backend & Database':
-        return <Server className="w-5 h-5 text-indigo-400" />;
+        return <Server className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />;
       default:
-        return <Wrench className="w-5 h-5 text-purple-400" />;
+        return <Wrench className="w-5 h-5 text-purple-600 dark:text-purple-400" />;
     }
   };
 
@@ -19,14 +19,14 @@ export const Skills: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 sm:space-y-4 mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-mono text-cyan-400">
-            <Cpu className="w-4 h-4 text-cyan-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs font-mono text-cyan-600 dark:text-cyan-400 shadow-sm dark:shadow-none transition-colors">
+            <Cpu className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
             <span>Technical Capabilities</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-100 tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight transition-colors">
             Skills & <span className="text-gradient">Tech Stack</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base lg:text-lg">
+          <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base lg:text-lg transition-colors">
             Comprehensive skill set built over 5+ years of engineering robust web applications,
             microservices, and testing suites.
           </p>
@@ -37,15 +37,17 @@ export const Skills: React.FC = () => {
           {SKILL_CATEGORIES.map((cat) => (
             <div
               key={cat.category}
-              className="glass-card glass-card-hover rounded-2xl p-5 sm:p-8 border border-slate-800 flex flex-col justify-between"
+              className="glass-card glass-card-hover rounded-2xl p-5 sm:p-8 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between transition-colors"
             >
               <div>
                 {/* Category Header */}
-                <div className="flex items-center gap-3 mb-5 pb-4 border-b border-slate-800/80">
-                  <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800">
+                <div className="flex items-center gap-3 mb-5 pb-4 border-b border-slate-200 dark:border-slate-800/80 transition-colors">
+                  <div className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 transition-colors">
                     {getCategoryIcon(cat.category)}
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-100">{cat.category}</h3>
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100 transition-colors">
+                    {cat.category}
+                  </h3>
                 </div>
 
                 {/* Skill Pills */}
@@ -53,9 +55,9 @@ export const Skills: React.FC = () => {
                   {cat.skills.map((skill) => (
                     <div
                       key={skill}
-                      className="px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl bg-slate-900/90 hover:bg-slate-800/90 border border-slate-800 hover:border-cyan-500/40 text-xs sm:text-sm font-medium text-slate-200 hover:text-cyan-300 transition-all duration-200 flex items-center gap-1.5 sm:gap-2 group"
+                      className="px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl bg-slate-100/90 dark:bg-slate-900/90 hover:bg-slate-200/90 dark:hover:bg-slate-800/90 border border-slate-200 dark:border-slate-800 hover:border-cyan-500/40 text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-cyan-300 transition-all duration-200 flex items-center gap-1.5 sm:gap-2 group shadow-sm dark:shadow-none"
                     >
-                      <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 group-hover:scale-110 transition-transform flex-shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-cyan-600 dark:text-cyan-400 group-hover:scale-110 transition-transform flex-shrink-0" />
                       <span>{skill}</span>
                     </div>
                   ))}
@@ -63,7 +65,7 @@ export const Skills: React.FC = () => {
               </div>
 
               {/* Bottom Note */}
-              <div className="mt-6 pt-4 border-t border-slate-800/60 text-xs font-mono text-slate-500">
+              <div className="mt-6 pt-4 border-t border-slate-200 dark:border-slate-800/60 text-xs font-mono text-slate-500 transition-colors">
                 <span>Verified in production environments</span>
               </div>
             </div>

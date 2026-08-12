@@ -22,37 +22,39 @@
 
 This repository contains the source code for the personal portfolio and web CV of **Doni Darmawan**, a Software Engineer based in Depok, West Java, Indonesia.
 
-Built with **React 19, TypeScript, Vite 6, and Tailwind CSS v4**, this application is designed with modern aesthetics (dark futuristic theme, glassmorphism, glowing micro-animations, and full mobile responsiveness).
+Built with **React 19, TypeScript, Vite 6, and Tailwind CSS v4**, this application is designed with modern aesthetics (Light/Dark theme support, adaptive glassmorphism, glowing micro-animations, and full mobile responsiveness).
 
 ---
 
 ## ✨ Features
 
+- **Light & Dark Mode Support**: 1-click theme toggle (Sun/Moon) in header & mobile menu with automatic OS System preference detection and `localStorage` persistence.
 - **Profile & Bio**: Highlights 5+ years of engineering experience, location, and key statistics.
 - **Open-Source NPM Spotlight**: Showcase section for published NPM packages with 1-click install command copy snippet.
 - **Career Journey Timeline**: Detailed work history at **Amartha Microfinance** (AmarthaFin Mobile App Hybrid WebView modules, 80%+ Jest coverage, KYC workflows) and **TwisCode**.
 - **Featured Projects**: Portfolio of enterprise applications and open-source starter templates.
 - **Technical Skills Matrix**: Comprehensive skill matrix covering Frontend, Backend, Database, and DevOps/Testing tools.
 - **Education & Bootcamps**: Credentials from Alterra Academy, PT. DumbWays Indonesia, and Universitas Mikroskil.
-- **PDF Resume Download**: Direct download link for the official CV PDF.
-- **Interactive Contact Section**: Contact information, email copy feature, and message form.
+- **PDF Resume Download**: Direct download link for the official CV PDF with standardized gradient CTA styling.
+- **Interactive Contact Form**: Contact information, email copy feature, and instant pre-filled `mailto:` email launcher.
 
 ---
 
 ## 📦 Published NPM Packages
 
-| Package                                                                    | Version  | Description                                                                                          | Install                   |
-| :------------------------------------------------------------------------- | :------: | :--------------------------------------------------------------------------------------------------- | :------------------------ |
+| Package                                                                    | Version  | Description                                                                                                                                                                        | Install                   |
+| :------------------------------------------------------------------------- | :------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------ |
 | [**`socketio-kit`**](https://www.npmjs.com/package/socketio-kit)           | `v0.2.0` | Developer-friendly Socket.IO SDK wrapper for Client & Express Server with type-safety & React hooks. Powers [**WebChat Monorepo App**](https://github.com/darmawandoni6/web-chat). | `npm i socketio-kit`      |
-| [**`template-ui-react`**](https://www.npmjs.com/package/template-ui-react) | `v2.0.1` | CLI tool & starter boilerplate to quickly scaffold modern React projects.                            | `npm i template-ui-react` |
-| [**`sidebar-menu-ui`**](https://www.npmjs.com/package/sidebar-menu-ui)     | `v1.0.3` | Lightweight UI sidebar menu component ready to use for React web applications.                       | `npm i sidebar-menu-ui`   |
+| [**`template-ui-react`**](https://www.npmjs.com/package/template-ui-react) | `v2.0.1` | CLI tool & starter boilerplate to quickly scaffold modern React projects.                                                                                                          | `npm i template-ui-react` |
+| [**`sidebar-menu-ui`**](https://www.npmjs.com/package/sidebar-menu-ui)     | `v1.0.3` | Lightweight UI sidebar menu component ready to use for React web applications.                                                                                                     | `npm i sidebar-menu-ui`   |
 
 ---
 
 ## 🛠️ Tech Stack & Architecture
 
 - **Core**: [React 19](https://react.dev/), [TypeScript](https://www.typescriptlang.org/), [Vite 6](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/), Custom CSS Glassmorphism
+- **State & Theme**: Custom `ThemeContext` (Light/Dark/System OS detection)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) with `@custom-variant dark`, Custom CSS Glassmorphism
 - **Icons**: [Lucide React](https://lucide.dev/), Custom SVG Social Icons
 - **Formatter**: [Prettier](https://prettier.io/)
 

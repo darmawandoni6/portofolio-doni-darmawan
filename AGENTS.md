@@ -66,21 +66,23 @@ portofolio-doni-darmawan/
 ├── public/assets/                # Served public assets (me.png, CV_Doni_Darmawan.pdf)
 ├── src/
 │   ├── components/               # React UI Components
-│   │   ├── Navbar.tsx            # Sticky navigation bar & mobile menu
-│   │   ├── Hero.tsx              # Hero header with profile photo & stats
+│   │   ├── Navbar.tsx            # Sticky navigation bar with 1-click theme toggle & mobile menu
+│   │   ├── Hero.tsx              # Hero header with profile photo, badges & stats
 │   │   ├── NpmSpotlight.tsx      # Open-source NPM packages showcase
 │   │   ├── Experience.tsx       # Work experience timeline
 │   │   ├── Projects.tsx         # Featured project cards
 │   │   ├── Skills.tsx           # Technical skills matrix
 │   │   ├── Education.tsx        # Education & Bootcamps
-│   │   ├── Contact.tsx          # Direct contact info & quick message form
+│   │   ├── Contact.tsx          # Direct contact info, PDF download CTA & mailto form
 │   │   ├── Footer.tsx           # Footer with links & copyright
 │   │   └── SocialIcons.tsx      # Custom SVG icons for Github & Linkedin
+│   ├── context/
+│   │   └── ThemeContext.tsx      # Central Theme Engine (Light, Dark, System fallback & localStorage)
 │   ├── data/
 │   │   └── cvData.ts             # CENTRAL DATA STORE (CV info, packages, experience)
-│   ├── App.tsx                   # Main layout container
+│   ├── App.tsx                   # Main layout container wrapped with ThemeProvider
 │   ├── main.tsx                  # Vite React entrypoint
-│   └── index.css                 # Tailwind v4 import & custom CSS animations
+│   └── index.css                 # Tailwind v4 import, @custom-variant dark & glassmorphism theme tokens
 ├── index.html                    # SEO metadata & Google Fonts
 ├── vite.config.ts                # Vite configuration with path aliases (@/*)
 └── tsconfig.json                 # TypeScript strict configuration
@@ -91,10 +93,12 @@ portofolio-doni-darmawan/
 ## 🎨 Design Rules & Styling Guidelines
 
 1. **Aesthetics & Theme**:
-   - Primary Background: Dark Slate (`bg-slate-950`)
-   - Typography: `Plus Jakarta Sans` (sans-serif) & `JetBrains Mono` (monospace code)
-   - Accents: Neon Cyan (`#38bdf8`), Indigo (`#818cf8`), Purple (`#c084fc`), Emerald (`#10b981`)
-   - Cards: Glassmorphism (`.glass-card`, `.glass-card-hover`) with semi-transparent background and blur effect.
+   - **Dual Theme System**: Supports Light Mode (`bg-slate-50`, `#f8fafc`) and Dark Mode (`bg-slate-950`, `#020617`).
+   - **System Fallback**: Defaults to OS preference (`prefers-color-scheme`) with 1-click toggle (`Sun` / `Moon`) saved to `localStorage`.
+   - **Tailwind v4 Variant**: Configured `@custom-variant dark (&:where(.dark, .dark *));` in `src/index.css` to trigger `dark:` class utilities on root `html`/`body`.
+   - **Typography**: `Plus Jakarta Sans` (sans-serif) & `JetBrains Mono` (monospace code).
+   - **Accents**: Neon Cyan (`#38bdf8`), Indigo (`#818cf8`), Purple (`#c084fc`), Emerald (`#10b981`).
+   - **Cards**: Theme-adaptive Glassmorphism (`.glass-card`, `.glass-card-hover`). Light mode renders crisp white glass cards with soft drop shadows; Dark mode renders dark slate glass cards.
 
 2. **Data-Driven Architecture**:
    - **DO NOT hardcode** CV info, text content, or package details directly inside component files.
@@ -116,4 +120,5 @@ portofolio-doni-darmawan/
 
 - **Testing & Verification**:
   - Run `npm run build` after editing to ensure zero TypeScript errors.
+  - Run `npm run format` to enforce Prettier formatting.
   - Run `npm run dev` to preview local changes.

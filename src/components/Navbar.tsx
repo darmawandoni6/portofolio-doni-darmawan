@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Download, Menu, X, Code2 } from 'lucide-react';
+import { Download, Menu, X, Code2, Sun, Moon } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './SocialIcons';
 import { PERSONAL_DATA } from '../data/cvData';
+import { useTheme } from '../context/ThemeContext';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { effectiveTheme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,7 +42,7 @@ export const Navbar: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-slate-950/85 backdrop-blur-md border-b border-slate-800/80 py-3 shadow-xl shadow-cyan-950/10'
+          ? 'bg-white/85 dark:bg-slate-950/85 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80 py-3 shadow-sm dark:shadow-xl dark:shadow-cyan-950/10'
           : 'bg-transparent py-4 sm:py-5'
       }`}
     >
@@ -53,28 +55,28 @@ export const Navbar: React.FC = () => {
             onClick={() => setMobileMenuOpen(false)}
           >
             <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-cyan-500 via-indigo-500 to-purple-600 p-0.5 shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform duration-300">
-              <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
-                <Code2 className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400 group-hover:rotate-12 transition-transform duration-300" />
+              <div className="w-full h-full bg-white dark:bg-slate-950 rounded-[10px] flex items-center justify-center transition-colors">
+                <Code2 className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-600 dark:text-cyan-400 group-hover:rotate-12 transition-transform duration-300" />
               </div>
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-base sm:text-lg text-slate-100 tracking-tight flex items-center gap-1.5">
+              <span className="font-bold text-base sm:text-lg text-slate-900 dark:text-slate-100 tracking-tight flex items-center gap-1.5 transition-colors">
                 Doni Darmawan
-                <span className="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                <span className="inline-block w-2 h-2 rounded-full bg-cyan-500 dark:bg-cyan-400 animate-pulse"></span>
               </span>
-              <span className="text-[11px] sm:text-xs text-slate-400 font-mono hidden xs:inline-block">
+              <span className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-mono hidden xs:inline-block transition-colors">
                 Software Engineer
               </span>
             </div>
           </a>
 
           {/* Desktop Nav Items */}
-          <nav className="hidden lg:flex items-center gap-1 bg-slate-900/70 p-1.5 rounded-full border border-slate-800/70 backdrop-blur-md">
+          <nav className="hidden lg:flex items-center gap-1 bg-slate-100/80 dark:bg-slate-900/70 p-1.5 rounded-full border border-slate-200/80 dark:border-slate-800/70 backdrop-blur-md transition-colors">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="px-3.5 py-1.5 text-xs xl:text-sm font-medium text-slate-300 hover:text-cyan-400 rounded-full hover:bg-slate-800/60 transition-all duration-200"
+                className="px-3.5 py-1.5 text-xs xl:text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 rounded-full hover:bg-slate-200/70 dark:hover:bg-slate-800/60 transition-all duration-200"
               >
                 {link.name}
               </a>
@@ -82,12 +84,26 @@ export const Navbar: React.FC = () => {
           </nav>
 
           {/* Desktop Right Action Buttons */}
-          <div className="hidden sm:flex items-center gap-2.5">
+          <div className="hidden sm:flex items-center gap-2">
+            {/* Quick 1-Click Theme Toggle Button (Light/Dark) */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800/60 rounded-xl transition-all border border-slate-200 dark:border-slate-800/80 bg-white/50 dark:bg-slate-900/50 group active:scale-95"
+              title={`Switch to ${effectiveTheme === 'dark' ? 'Light' : 'Dark'} Mode`}
+              aria-label="Toggle Light and Dark Mode"
+            >
+              {effectiveTheme === 'dark' ? (
+                <Sun className="w-5 h-5 text-amber-400 group-hover:rotate-45 transition-transform duration-300" />
+              ) : (
+                <Moon className="w-5 h-5 text-slate-700 group-hover:-rotate-12 transition-transform duration-300" />
+              )}
+            </button>
+
             <a
               href={PERSONAL_DATA.github}
               target="_blank"
               rel="noreferrer"
-              className="p-2 text-slate-400 hover:text-slate-100 hover:bg-slate-800/60 rounded-xl transition-all"
+              className="p-2 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800/60 rounded-xl transition-all"
               title="GitHub Profile"
             >
               <GithubIcon className="w-5 h-5" />
@@ -97,7 +113,7 @@ export const Navbar: React.FC = () => {
               href={PERSONAL_DATA.linkedin}
               target="_blank"
               rel="noreferrer"
-              className="p-2 text-slate-400 hover:text-slate-100 hover:bg-slate-800/60 rounded-xl transition-all"
+              className="p-2 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800/60 rounded-xl transition-all"
               title="LinkedIn Profile"
             >
               <LinkedinIcon className="w-5 h-5" />
@@ -109,8 +125,8 @@ export const Navbar: React.FC = () => {
               className="relative group overflow-hidden rounded-xl p-[1px] font-semibold text-xs sm:text-sm focus:outline-none"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-600 rounded-xl transition-all group-hover:opacity-90"></span>
-              <span className="relative flex items-center gap-2 px-3.5 py-2 sm:px-4 sm:py-2 rounded-[11px] bg-slate-950 text-slate-100 transition-all group-hover:bg-opacity-80">
-                <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-400 group-hover:translate-y-0.5 transition-transform" />
+              <span className="relative flex items-center gap-2 px-3.5 py-2 sm:px-4 sm:py-2 rounded-[11px] bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-all group-hover:bg-opacity-90 dark:group-hover:bg-opacity-80">
+                <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-600 dark:text-cyan-400 group-hover:translate-y-0.5 transition-transform" />
                 <span>Download CV</span>
               </span>
             </a>
@@ -118,10 +134,24 @@ export const Navbar: React.FC = () => {
 
           {/* Mobile Right Controls */}
           <div className="flex items-center gap-2 lg:hidden">
+            {/* Mobile 1-Click Theme Toggle Button */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 active:scale-95 transition-all"
+              title={`Switch to ${effectiveTheme === 'dark' ? 'Light' : 'Dark'} Mode`}
+              aria-label="Toggle Light and Dark Mode"
+            >
+              {effectiveTheme === 'dark' ? (
+                <Sun className="w-4 h-4 text-amber-400" />
+              ) : (
+                <Moon className="w-4 h-4 text-slate-700" />
+              )}
+            </button>
+
             <a
               href={PERSONAL_DATA.cvPdf}
               download="CV_Doni_Darmawan.pdf"
-              className="sm:hidden p-2 rounded-xl bg-slate-900 border border-slate-800 text-cyan-400 active:scale-95 transition-all"
+              className="sm:hidden p-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-cyan-600 dark:text-cyan-400 active:scale-95 transition-all"
               title="Download CV"
             >
               <Download className="w-4 h-4" />
@@ -129,7 +159,7 @@ export const Navbar: React.FC = () => {
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-slate-100 focus:outline-none active:scale-95 transition-all"
+              className="p-2 rounded-xl bg-slate-100 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 focus:outline-none active:scale-95 transition-all"
               aria-label="Toggle Navigation"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -140,27 +170,27 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-slate-950/95 backdrop-blur-2xl border-b border-slate-800 px-4 pt-3 pb-6 space-y-3 mt-3 shadow-2xl animate-in fade-in slide-in-from-top-4">
+        <div className="lg:hidden bg-white/95 dark:bg-slate-950/95 backdrop-blur-2xl border-b border-slate-200 dark:border-slate-800 px-4 pt-3 pb-6 space-y-3 mt-3 shadow-2xl animate-in fade-in slide-in-from-top-4">
           <div className="flex flex-col space-y-1">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="px-4 py-2.5 text-sm font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-900/80 rounded-xl transition-all"
+                className="px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-900/80 rounded-xl transition-all"
               >
                 {link.name}
               </a>
             ))}
           </div>
 
-          <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between gap-3">
-            <div className="flex items-center gap-3">
+          <div className="pt-4 border-t border-slate-200 dark:border-slate-800/80 flex items-center justify-between gap-3">
+            <div className="flex items-center gap-2">
               <a
                 href={PERSONAL_DATA.github}
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-cyan-400"
+                className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400"
                 aria-label="GitHub"
               >
                 <GithubIcon className="w-5 h-5" />
@@ -169,7 +199,7 @@ export const Navbar: React.FC = () => {
                 href={PERSONAL_DATA.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-cyan-400"
+                className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400"
                 aria-label="LinkedIn"
               >
                 <LinkedinIcon className="w-5 h-5" />
