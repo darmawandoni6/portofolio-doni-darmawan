@@ -51,6 +51,11 @@ When updating package spotlights or projects, reference these exact URLs and det
    - Role: Front-End Developer (May 2020 – Aug 2021)
    - Key highlights: Next.js admin dashboards, WordPress & Elementor client landing pages, high-velocity software house projects.
 
+6. **WebChat Monorepo App (`web-chat`)**:
+   - Description: High-performance real-time monorepo chat platform featuring Google OAuth 2.0 & Guest auth, private 1-on-1 messaging, group channels, inline file/photo uploads, and presence indicators.
+   - Tech Stack: Turborepo, React 18, Vite, Express, TypeScript, Socket.IO (`socketio-kit`), Tailwind CSS v4.
+   - GitHub: `https://github.com/darmawandoni6/web-chat`
+
 ---
 
 ## 🛠️ Project Architecture & Tech Stack

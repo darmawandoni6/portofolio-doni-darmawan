@@ -43,7 +43,7 @@ Built with **React 19, TypeScript, Vite 6, and Tailwind CSS v4**, this applicati
 
 | Package                                                                    | Version  | Description                                                                                          | Install                   |
 | :------------------------------------------------------------------------- | :------: | :--------------------------------------------------------------------------------------------------- | :------------------------ |
-| [**`socketio-kit`**](https://www.npmjs.com/package/socketio-kit)           | `v0.2.0` | Developer-friendly Socket.IO SDK wrapper for Client & Express Server with type-safety & React hooks. | `npm i socketio-kit`      |
+| [**`socketio-kit`**](https://www.npmjs.com/package/socketio-kit)           | `v0.2.0` | Developer-friendly Socket.IO SDK wrapper for Client & Express Server with type-safety & React hooks. Powers [**WebChat Monorepo App**](https://github.com/darmawandoni6/web-chat). | `npm i socketio-kit`      |
 | [**`template-ui-react`**](https://www.npmjs.com/package/template-ui-react) | `v2.0.1` | CLI tool & starter boilerplate to quickly scaffold modern React projects.                            | `npm i template-ui-react` |
 | [**`sidebar-menu-ui`**](https://www.npmjs.com/package/sidebar-menu-ui)     | `v1.0.3` | Lightweight UI sidebar menu component ready to use for React web applications.                       | `npm i sidebar-menu-ui`   |
 
