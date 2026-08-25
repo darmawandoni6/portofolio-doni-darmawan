@@ -38,6 +38,7 @@ Built with **React 19, TypeScript, Vite 6, and Tailwind CSS v4**, this applicati
 - **Education & Bootcamps**: Academic & intensive bootcamp credentials with 1-click verified certificate links (Alterra Academy Golang & PT. DumbWays Indonesia Full Stack JavaScript).
 - **PDF Resume Download**: Direct download link for the official CV PDF with standardized gradient CTA styling.
 - **Interactive Contact Form**: Contact information, email copy feature, and instant pre-filled `mailto:` email launcher.
+- **SEO & Social Preview Card**: Fully configured Open Graph and Twitter Card tags with custom 1200x627 LinkedIn thumbnail (`public/assets/banner.png` & `public/assets/banner.svg`).
 
 ---
 

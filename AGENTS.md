@@ -68,7 +68,7 @@ When updating package spotlights or projects, reference these exact URLs and det
 ```
 portofolio-doni-darmawan/
 ├── assets/                       # Raw source assets (CV PDF & Profile Photo)
-├── public/assets/                # Served public assets (me.png, CV_Doni_Darmawan.pdf)
+├── public/assets/                # Served public assets (me.png, banner.png, banner.svg, CV_Doni_Darmawan.pdf)
 ├── src/
 │   ├── components/               # React UI Components
 │   │   ├── Navbar.tsx            # Sticky navigation bar with 1-click theme toggle & mobile menu
