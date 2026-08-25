@@ -4,13 +4,26 @@ import { PERSONAL_DATA } from '../data/cvData';
 
 export const Contact: React.FC = () => {
   const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+
+  const rawPhoneDigits = PERSONAL_DATA.phone.replace(/\D/g, '');
+  const waDigits = rawPhoneDigits.startsWith('62')
+    ? rawPhoneDigits
+    : `62${rawPhoneDigits.replace(/^0/, '')}`;
+  const waUrl = `https://wa.me/${waDigits}`;
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(PERSONAL_DATA.email);
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
+  };
+
+  const handleCopyPhone = () => {
+    navigator.clipboard.writeText(PERSONAL_DATA.phone);
+    setCopiedPhone(true);
+    setTimeout(() => setCopiedPhone(false), 2000);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -95,19 +108,45 @@ export const Contact: React.FC = () => {
               <div className="p-3 sm:p-3.5 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-600 dark:text-indigo-400 flex-shrink-0">
                 <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
-              <div>
+              <div className="flex-1 min-w-0">
                 <p className="text-xs font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider transition-colors">
                   Phone / WhatsApp
                 </p>
                 <a
-                  href={`https://wa.me/62${PERSONAL_DATA.phone.substring(1)}`}
+                  href={waUrl}
                   target="_blank"
                   rel="noreferrer"
                   className="text-sm sm:text-base font-bold text-slate-900 dark:text-slate-100 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors block mt-0.5"
                 >
                   {PERSONAL_DATA.phone}
                 </a>
-                <p className="text-xs text-slate-500 mt-1">Available for direct messages & calls</p>
+                <div className="mt-2 flex flex-wrap items-center gap-2">
+                  <a
+                    href={waUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-xs font-mono text-emerald-700 dark:text-emerald-300 border border-emerald-500/30 transition-all shadow-sm dark:shadow-none"
+                  >
+                    <MessageSquare className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+                    <span>WhatsApp</span>
+                  </a>
+                  <button
+                    onClick={handleCopyPhone}
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 text-xs font-mono text-cyan-700 dark:text-cyan-300 border border-slate-200 dark:border-slate-800 transition-all shadow-sm dark:shadow-none"
+                  >
+                    {copiedPhone ? (
+                      <>
+                        <Check className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+                        <span>Copied!</span>
+                      </>
+                    ) : (
+                      <>
+                        <Copy className="w-3.5 h-3.5" />
+                        <span>Copy</span>
+                      </>
+                    )}
+                  </button>
+                </div>
               </div>
             </div>
 

@@ -11,7 +11,7 @@ This document provides project context, tech stack rules, design guidelines, and
 - **Specialization**: Next.js, React, TypeScript, Node.js, WebView Bridges, & Open-Source Libraries
 - **Location**: Depok, West Java, Indonesia
 - **Email**: darmawandoni6@gmail.com
-- **Phone**: +62 085761298781
+- **Phone**: +62 857-6129-8781
 - **GitHub**: [darmawandoni6](https://github.com/darmawandoni6)
 - **LinkedIn**: [doni-darmawan](https://www.linkedin.com/in/doni-darmawan/)
 - **Profile Image**: `public/assets/me.png`

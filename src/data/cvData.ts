@@ -44,7 +44,7 @@ export const PERSONAL_DATA = {
   subtitle: 'Frontend & Full-Stack Specialist | 5+ Years Experience',
   bio: 'Software Engineer with 5+ years of experience specializing in building responsive, scalable, and high-performance web applications using Next.js, React, JavaScript, and TypeScript. Proven track record across product-driven microfinance (Amartha) and agile software house environments (TwisCode). Expert in WebView bridges, Jest testing (80%+ coverage), Node.js backend, and AI-assisted engineering workflows.',
   location: 'Depok, West Java, Indonesia',
-  phone: '085761298781',
+  phone: '+62 857-6129-8781',
   email: 'darmawandoni6@gmail.com',
   linkedin: 'https://www.linkedin.com/in/doni-darmawan/',
   github: 'https://github.com/darmawandoni6',
