@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Award, Calendar, MapPin, CheckCircle } from 'lucide-react';
+import { GraduationCap, Award, Calendar, MapPin, CheckCircle, ExternalLink } from 'lucide-react';
 import { EDUCATION_LIST, Education as EducationType } from '../data/cvData';
 
 export const Education: React.FC = () => {
@@ -74,15 +74,30 @@ export const Education: React.FC = () => {
                 )}
               </div>
 
-              {/* Location Footer */}
-              <div className="mt-6 pt-3 border-t border-slate-200 dark:border-slate-800/60 flex items-center justify-between text-xs font-mono text-slate-500 transition-colors">
-                <span className="flex items-center gap-1">
-                  <MapPin className="w-3.5 h-3.5 flex-shrink-0" />
-                  {edu.location}
-                </span>
-                <span className="text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1">
-                  <CheckCircle className="w-3 h-3" /> Completed
-                </span>
+              {/* Bottom Actions & Location Footer */}
+              <div className="mt-6 space-y-3">
+                {edu.certificateUrl && (
+                  <a
+                    href={edu.certificateUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-full inline-flex items-center justify-center gap-2 py-2 px-3 rounded-xl bg-purple-500/10 hover:bg-purple-500/20 text-purple-700 dark:text-purple-300 border border-purple-500/30 hover:border-purple-500/50 transition-all font-semibold text-xs group/btn shadow-sm"
+                  >
+                    <Award className="w-3.5 h-3.5 text-purple-600 dark:text-purple-400" />
+                    <span>View Certificate</span>
+                    <ExternalLink className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-0.5" />
+                  </a>
+                )}
+
+                <div className="pt-3 border-t border-slate-200 dark:border-slate-800/60 flex items-center justify-between text-xs font-mono text-slate-500 transition-colors">
+                  <span className="flex items-center gap-1">
+                    <MapPin className="w-3.5 h-3.5 flex-shrink-0" />
+                    {edu.location}
+                  </span>
+                  <span className="text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1">
+                    <CheckCircle className="w-3 h-3" /> Completed
+                  </span>
+                </div>
               </div>
             </div>
           ))}

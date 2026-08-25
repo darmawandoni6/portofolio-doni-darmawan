@@ -35,6 +35,7 @@ export interface Education {
   location: string;
   type: 'Bootcamp' | 'Degree';
   description?: string;
+  certificateUrl?: string;
 }
 
 export const PERSONAL_DATA = {
@@ -261,6 +262,8 @@ export const EDUCATION_LIST: Education[] = [
     type: 'Bootcamp',
     description:
       'Intensive backend engineering program focusing on Golang microservices, REST APIs, database management, and clean architecture.',
+    certificateUrl:
+      'https://drive.google.com/file/d/1rcgLEJqXrUm6qZmkK0t5M48lhL_pb_os/view?usp=share_link',
   },
   {
     institution: 'PT. DumbWays Indonesia Teknologi',
@@ -270,6 +273,8 @@ export const EDUCATION_LIST: Education[] = [
     type: 'Bootcamp',
     description:
       'Full stack engineering bootcamp covering React.js, Node.js, Express, database integrations, and deployment.',
+    certificateUrl:
+      'https://drive.google.com/file/d/1ecbaxKpbvq1xy_FOfehNBmMpZjURYVhO/view?usp=share_link',
   },
   {
     institution: 'Universitas Mikroskil',

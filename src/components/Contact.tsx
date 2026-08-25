@@ -1,5 +1,5 @@
+import { Check, Copy, Download, Mail, MapPin, MessageSquare, Phone, Send } from 'lucide-react';
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Copy, Check, Download, MessageSquare } from 'lucide-react';
 import { PERSONAL_DATA } from '../data/cvData';
 
 export const Contact: React.FC = () => {
@@ -105,7 +105,7 @@ export const Contact: React.FC = () => {
                   rel="noreferrer"
                   className="text-sm sm:text-base font-bold text-slate-900 dark:text-slate-100 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors block mt-0.5"
                 >
-                  +62 {PERSONAL_DATA.phone}
+                  {PERSONAL_DATA.phone}
                 </a>
                 <p className="text-xs text-slate-500 mt-1">Available for direct messages & calls</p>
               </div>
