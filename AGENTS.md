@@ -56,6 +56,11 @@ When updating package spotlights or projects, reference these exact URLs and det
    - Tech Stack: Turborepo, React 18, Vite, Express, TypeScript, Socket.IO (`socketio-kit`), Tailwind CSS v4.
    - GitHub: `https://github.com/darmawandoni6/web-chat`
 
+7. **Education & Bootcamp Credentials**:
+   - **Alterra Academy**: Back End Golang Developer Intensive Bootcamp (Jul 2021 – Aug 2021) — [Certificate](https://drive.google.com/file/d/1rcgLEJqXrUm6qZmkK0t5M48lhL_pb_os/view?usp=share_link)
+   - **PT. DumbWays Indonesia Teknologi**: Full Stack Developer JavaScript Intensive Bootcamp (Feb 2020 – May 2020) — [Certificate](https://drive.google.com/file/d/1ecbaxKpbvq1xy_FOfehNBmMpZjURYVhO/view?usp=share_link)
+   - **Universitas Mikroskil**: Diploma Degree (D3) in Manajemen Informatika (Jan 2016 – Nov 2019)
+
 ---
 
 ## 🛠️ Project Architecture & Tech Stack
@@ -115,8 +120,8 @@ portofolio-doni-darmawan/
 - **Adding a new NPM package or project**:
   - Open `src/data/cvData.ts` and add an entry to `NPM_PACKAGES` or `FEATURED_PROJECTS`.
 
-- **Updating Work Experience or Skills**:
-  - Open `src/data/cvData.ts` and update `WORK_EXPERIENCES` or `SKILL_CATEGORIES`.
+- **Updating Work Experience, Skills, or Education**:
+  - Open `src/data/cvData.ts` and update `WORK_EXPERIENCES`, `SKILL_CATEGORIES`, or `EDUCATION_LIST` (including `certificateUrl`).
 
 - **Testing & Verification**:
   - Run `npm run build` after editing to ensure zero TypeScript errors.

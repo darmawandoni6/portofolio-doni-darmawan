@@ -34,7 +34,7 @@ Built with **React 19, TypeScript, Vite 6, and Tailwind CSS v4**, this applicati
 - **Career Journey Timeline**: Detailed work history at **Amartha Microfinance** (AmarthaFin Mobile App Hybrid WebView modules, 80%+ Jest coverage, KYC workflows) and **TwisCode**.
 - **Featured Projects**: Portfolio of enterprise applications and open-source starter templates.
 - **Technical Skills Matrix**: Comprehensive skill matrix covering Frontend, Backend, Database, and DevOps/Testing tools.
-- **Education & Bootcamps**: Credentials from Alterra Academy, PT. DumbWays Indonesia, and Universitas Mikroskil.
+- **Education & Bootcamps**: Academic & intensive bootcamp credentials with 1-click verified certificate links (Alterra Academy Golang & PT. DumbWays Indonesia Full Stack JavaScript).
 - **PDF Resume Download**: Direct download link for the official CV PDF with standardized gradient CTA styling.
 - **Interactive Contact Form**: Contact information, email copy feature, and instant pre-filled `mailto:` email launcher.
 
