@@ -111,7 +111,7 @@ portofolio-doni-darmawan/
 
 3. **Icons & Assets**:
    - Standard UI icons use `lucide-react`.
-   - Brand icons (GitHub, LinkedIn) use `<GithubIcon />` and `<LinkedinIcon />` from `src/components/SocialIcons.tsx`.
+   - Brand icons (GitHub, LinkedIn, WhatsApp) use `<GithubIcon />`, `<LinkedinIcon />`, and `<WhatsappIcon />` from `src/components/SocialIcons.tsx`.
 
 ---
 

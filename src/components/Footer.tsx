@@ -1,7 +1,7 @@
 import { ArrowUp, Code2, Heart, Mail } from 'lucide-react';
 import React from 'react';
 import { PERSONAL_DATA } from '../data/cvData';
-import { GithubIcon, LinkedinIcon } from './SocialIcons';
+import { GithubIcon, LinkedinIcon, WhatsappIcon } from './SocialIcons';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -48,6 +48,15 @@ export const Footer: React.FC = () => {
               aria-label="LinkedIn"
             >
               <LinkedinIcon className="w-4 h-4" />
+            </a>
+            <a
+              href={PERSONAL_DATA.whatsapp}
+              target="_blank"
+              rel="noreferrer"
+              className="p-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-slate-200 dark:hover:bg-slate-800 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors shadow-sm dark:shadow-none"
+              aria-label="WhatsApp"
+            >
+              <WhatsappIcon className="w-4 h-4" />
             </a>
             <a
               href={`mailto:${PERSONAL_DATA.email}`}

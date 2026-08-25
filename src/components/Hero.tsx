@@ -1,6 +1,6 @@
 import React from 'react';
 import { Download, Mail, MapPin, ArrowRight, Package, ShieldCheck, Terminal } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from './SocialIcons';
+import { GithubIcon, LinkedinIcon, WhatsappIcon } from './SocialIcons';
 import { PERSONAL_DATA } from '../data/cvData';
 
 export const Hero: React.FC = () => {
@@ -106,6 +106,15 @@ export const Hero: React.FC = () => {
                 aria-label="LinkedIn"
               >
                 <LinkedinIcon className="w-5 h-5" />
+              </a>
+              <a
+                href={PERSONAL_DATA.whatsapp}
+                target="_blank"
+                rel="noreferrer"
+                className="p-2.5 rounded-xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:border-emerald-500/40 transition-all shadow-sm dark:shadow-none"
+                aria-label="WhatsApp"
+              >
+                <WhatsappIcon className="w-5 h-5" />
               </a>
             </div>
           </div>

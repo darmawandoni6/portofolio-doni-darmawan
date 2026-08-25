@@ -1,6 +1,7 @@
 import { Check, Copy, Download, Mail, MapPin, MessageSquare, Phone, Send } from 'lucide-react';
 import React, { useState } from 'react';
 import { PERSONAL_DATA } from '../data/cvData';
+import { WhatsappIcon } from './SocialIcons';
 
 export const Contact: React.FC = () => {
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -127,7 +128,7 @@ export const Contact: React.FC = () => {
                     rel="noreferrer"
                     className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-xs font-mono text-emerald-700 dark:text-emerald-300 border border-emerald-500/30 transition-all shadow-sm dark:shadow-none"
                   >
-                    <MessageSquare className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+                    <WhatsappIcon className="w-3.5 h-3.5" />
                     <span>WhatsApp</span>
                   </a>
                   <button

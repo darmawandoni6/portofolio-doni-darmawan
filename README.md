@@ -12,6 +12,7 @@
 <p align="center">
   <a href="https://github.com/darmawandoni6"><img src="https://img.shields.io/badge/GitHub-darmawandoni6-181717?style=flat-square&logo=github" alt="GitHub" /></a>
   <a href="https://www.linkedin.com/in/doni-darmawan/"><img src="https://img.shields.io/badge/LinkedIn-doni--darmawan-0A66C2?style=flat-square&logo=linkedin" alt="LinkedIn" /></a>
+  <a href="https://wa.me/6285761298781"><img src="https://img.shields.io/badge/WhatsApp-%2B62%20857--6129--8781-25D366?style=flat-square&logo=whatsapp" alt="WhatsApp" /></a>
   <a href="mailto:darmawandoni6@gmail.com"><img src="https://img.shields.io/badge/Email-darmawandoni6%40gmail.com-EA4335?style=flat-square&logo=gmail" alt="Email" /></a>
   <a href="https://www.npmjs.com/~darmawandoni6"><img src="https://img.shields.io/badge/NPM-Packages-CB3837?style=flat-square&logo=npm" alt="NPM" /></a>
 </p>

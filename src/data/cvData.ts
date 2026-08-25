@@ -48,6 +48,7 @@ export const PERSONAL_DATA = {
   email: 'darmawandoni6@gmail.com',
   linkedin: 'https://www.linkedin.com/in/doni-darmawan/',
   github: 'https://github.com/darmawandoni6',
+  whatsapp: 'https://wa.me/6285761298781',
   profileImage: '/assets/me.png',
   cvPdf: '/assets/CV_Doni_Darmawan.pdf',
   referenceSite: 'https://darmawan.netlify.app/',
