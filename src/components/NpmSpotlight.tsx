@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { Package, ExternalLink, Copy, Check, Terminal } from 'lucide-react';
 import { GithubIcon } from './SocialIcons';
 import { NPM_PACKAGES, NpmPackage } from '../data/cvData';
+import { useNpmVersions } from '../hooks/useNpmVersions';
 
 export const NpmSpotlight: React.FC = () => {
   const [copiedPkg, setCopiedPkg] = useState<string | null>(null);
+  const npmVersions = useNpmVersions(NPM_PACKAGES);
 
   const handleCopy = (cmd: string, pkgName: string) => {
     navigator.clipboard.writeText(cmd);
@@ -51,7 +53,7 @@ export const NpmSpotlight: React.FC = () => {
                   </span>
                   <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-xs font-mono text-emerald-700 dark:text-emerald-400 flex items-center gap-1 font-semibold">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400"></span>
-                    v{pkg.version}
+                    v{npmVersions[pkg.name] || pkg.version}
                   </span>
                 </div>
 

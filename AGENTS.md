@@ -83,6 +83,8 @@ portofolio-doni-darmawan/
 │   │   └── SocialIcons.tsx      # Custom SVG icons for Github & Linkedin
 │   ├── context/
 │   │   └── ThemeContext.tsx      # Central Theme Engine (Light, Dark, System fallback & localStorage)
+│   ├── hooks/
+│   │   └── useNpmVersions.ts     # Real-time NPM Registry dynamic version fetcher with fallback
 │   ├── data/
 │   │   └── cvData.ts             # CENTRAL DATA STORE (CV info, packages, experience)
 │   ├── App.tsx                   # Main layout container wrapped with ThemeProvider

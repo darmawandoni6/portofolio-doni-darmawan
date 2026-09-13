@@ -31,7 +31,7 @@ Built with **React 19, TypeScript, Vite 6, and Tailwind CSS v4**, this applicati
 
 - **Light & Dark Mode Support**: 1-click theme toggle (Sun/Moon) in header & mobile menu with automatic OS System preference detection and `localStorage` persistence.
 - **Profile & Bio**: Highlights 5+ years of engineering experience, location, and key statistics.
-- **Open-Source NPM Spotlight**: Showcase section for published NPM packages with 1-click install command copy snippet.
+- **Open-Source NPM Spotlight**: Showcase section for published NPM packages with real-time dynamic version fetching from the official NPM Registry and 1-click install command copy snippet.
 - **Career Journey Timeline**: Detailed work history at **Amartha Microfinance** (AmarthaFin Mobile App Hybrid WebView modules, 80%+ Jest coverage, KYC workflows) and **TwisCode**.
 - **Featured Projects**: Portfolio of enterprise applications and open-source starter templates.
 - **Technical Skills Matrix**: Comprehensive skill matrix covering Frontend, Backend, Database, and DevOps/Testing tools.
