@@ -149,6 +149,24 @@ export const FEATURED_PROJECTS: Project[] = [
     tags: ['PWA', 'React', 'Chart.js', 'State Management'],
     featured: false,
   },
+  {
+    title: 'Jaga Warung (App Website)',
+    subtitle: 'Marketing Site · React + Vite + shadcn/ui',
+    description:
+      'Bilingual (ID/EN) marketing landing page for the Jaga Warung POS app — 9 sections including hero, features, phone mockup screenshot slider, demo video modal, pricing, and FAQ. Built with React 19, Vite, Tailwind CSS v3, shadcn/ui, and react-i18next.',
+    url: 'https://jaga-warung.vercel.app/',
+    tags: ['React 19', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'react-i18next', 'SEO'],
+    featured: false,
+  },
+  {
+    title: 'Jaga Warung (Mobile POS)',
+    subtitle: 'Offline-First POS & Inventory App',
+    description:
+      'Point of Sale & inventory management mobile app for neighborhood warung kelontong. Barcode scanning, real-time cart, checkout with change calculation, debt tracking, cash flow, financial reports, and full JSON backup/restore.',
+    url: 'https://github.com/darmawandoni6/jaga-warung',
+    tags: ['Expo', 'React Native', 'SQLite', 'Zustand', 'NativeWind', 'TypeScript'],
+    featured: false,
+  },
 ];
 
 export const WORK_EXPERIENCES: Experience[] = [
@@ -213,6 +231,7 @@ export const SKILL_CATEGORIES = [
       'TypeScript',
       'Next.js',
       'React',
+      'React Native',
       'Vite',
       'HTML5',
       'CSS3',
